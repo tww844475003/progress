@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link href="css/jquery.progress.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<br><br>
+	<div class="progress" id="progress">
+		<div class="jd"></div>
+		<span></span>
+	</div>
+	
+	<br><br>
+	<div class="progress" id="progress2">
+		<div class="jd"></div>
+		<span></span>
+	</div>
+
+	<br><br>
+	<div class="progress" id="progress3">
+		<div class="jd"></div>
+		<span></span>
+	</div>
+	
+	<script type="text/javascript" src="./seajs/sea.js"></script>
+	<script type="text/javascript">
+		seajs.config({
+			base: './seajs',
+			alias: {
+				'jquery': 'jquery.js',
+				'progress': 'jquery.progress.js'
+			}
+		});
+
+		seajs.use(['jquery','progress'],function($) {
+			$('#progress').progress({
+				default: 50
+			});
+
+			$('#progress2').progress({
+				default: 30
+			});
+
+			$('#progress3').progress({
+				default: 120
+			});
+		});
+	</script>
+</body>
+</html>
